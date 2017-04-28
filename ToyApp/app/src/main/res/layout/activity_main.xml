@@ -5,70 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.sagarayi.toyapp.MainActivity">
-    <TableLayout
+    <RelativeLayout
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
         >
-        <TableRow
-            android:layout_marginTop="30dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="First button"
                 android:id="@+id/firstButton"
-                android:layout_marginLeft="30dp"
                 android:onClick="buttonClicked"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Second button"
                 android:id="@+id/secondButton"
-                android:layout_marginLeft="20dp"
                 android:onClick="buttonClicked"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
                 />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Third button"
+            android:id="@+id/thirdButton"
+            android:onClick="buttonClicked"
+            android:layout_below="@id/firstButton"
+            android:layout_alignLeft="@id/firstButton"
+            android:layout_alignRight="@id/firstButton"
+            android:layout_alignParentLeft="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fourth button"
+            android:id="@+id/fourthButton"
+            android:onClick="buttonClicked"
+            android:layout_below="@id/secondButton"
+            android:layout_alignLeft="@id/secondButton"
+            android:layout_alignRight="@id/secondButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/thirdButton"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fifth button"
+            android:id="@+id/fifthButton"
+            android:onClick="buttonClicked"
+            android:layout_below="@id/thirdButton"
+            android:layout_alignLeft="@id/thirdButton"
+            android:layout_alignRight="@id/thirdButton"
+            android:layout_alignParentLeft="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sixth button"
+            android:id="@+id/sixthButton"
+            android:onClick="buttonClicked"
+            android:layout_below="@id/fourthButton"
+            android:layout_alignLeft="@id/fourthButton"
+            android:layout_alignRight="@id/fourthButton"
+            android:layout_alignBottom="@id/fifthButton"
+            />
 
-        </TableRow>
-        <TableRow
-            android:layout_marginTop="30dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Third button"
-                android:id="@+id/thirdButton"
-                android:layout_marginLeft="30dp"
-                android:onClick="buttonClicked"
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fourth button"
-                android:id="@+id/fourthButton"
-                android:layout_marginLeft="20dp"
-                android:onClick="buttonClicked"
-                />
-
-        </TableRow>
-        <TableRow
-            android:layout_marginTop="30dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fifth button"
-                android:id="@+id/fifthButton"
-                android:layout_marginLeft="30dp"
-                android:onClick="buttonClicked"
-                />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sixth button"
-                android:id="@+id/sixthButton"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="40dp"
-                android:onClick="buttonClicked"
-                />
-        </TableRow>
-    </TableLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
