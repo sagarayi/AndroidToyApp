@@ -1,9 +1,11 @@
 package com.sagarayi.toyapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,13 +14,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void buttonClicked(View v)
+    public  void buttonClicked(View v)
     {
 
         switch (v.getId())
         {
             case R.id.firstButton:
-            Toast.makeText(MainActivity.this,"hi-one",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this,"hi-one",Toast.LENGTH_SHORT).show();
+                Intent newIntent = new Intent(MainActivity.this , TextFieldActivity.class);
+                MainActivity.this.startActivity(newIntent);
                 break;
             case R.id.secondButton:
                 Toast.makeText(MainActivity.this,"hi-two",Toast.LENGTH_SHORT).show();
